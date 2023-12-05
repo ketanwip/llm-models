@@ -36,6 +36,21 @@ Visit PyTorch's Get Started Page (https://pytorch.org/get-started/locally/) to f
 Select your preferences (OS, Package, Language, CUDA version if you have GPU support) and copy the generated command.
 Run the copied command in your terminal to install PyTorch. (In my case it was **pip3 install torch torchvision torchaudio**)
 
+# Internet Requirement
+In the codes used in this experiment, the model and tokenizer are fetched from Hugging Face's online model repository the first time you run the script. Here's how it works:
+
+Initialization of the Pipeline:
+When the line **pipeline('question-answering', model="distilbert-base-uncased-distilled-squad")** is executed, the transformers library checks if the specified model ("distilbert-base-uncased-distilled-squad") is available locally. If the model is not already downloaded on your system, it will be fetched from Hugging Face's online model repository and cached locally. This involves downloading the pre-trained model weights and any necessary configuration files.
+
+Subsequent Use:
+Once the model is downloaded and saved in your local cache, subsequent runs of the script will use the locally stored version. It will not download the model again unless you clear the cache or update the model version in your script.
+
+Internet Requirement:
+An internet connection is required for the initial download of the model. After the first download, no internet connection is needed, as the model will run locally using the cached version.
+
+Model Storage:
+The downloaded models are typically stored in a directory like ~/.cache/huggingface/transformers/ on your system.
+This mechanism allows users to easily access and utilize a wide range of pre-trained models without having to manually download and configure them, making it convenient to start with NLP tasks using state-of-the-art models.
 
 ## Other NLP tasks that can be done
 Code in this repo, does question/answering, sentiment check and Name-entity-recognition NLP tasks. distilBERT can do more tasks
