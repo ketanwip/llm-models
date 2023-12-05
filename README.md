@@ -36,3 +36,20 @@ Visit PyTorch's Get Started Page (https://pytorch.org/get-started/locally/) to f
 Select your preferences (OS, Package, Language, CUDA version if you have GPU support) and copy the generated command.
 Run the copied command in your terminal to install PyTorch. (In my case it was **pip3 install torch torchvision torchaudio**)
 
+
+## Other NLP tasks that can be done
+Code in this repo, does question/answering, sentiment check and Name-entity-recognition NLP tasks. distilBERT can do more tasks
+
+Text Summarization: Generate a concise and fluent summary of a longer text.
+
+Translation (limited compared to specialized models): Translate text from one language to another, although for complex translations, models specifically trained for translation tasks are more effective.
+
+Text Generation (limited compared to models like GPT-3): Generate text based on a given prompt. DistilBERT can be used for this, but it's not its primary strength.
+
+Feature Extraction: Use the model to convert text into feature vectors that can then be used in various machine learning applications.
+
+Language Modeling: Predict the likelihood of a sentence or continuation of a sentence, useful in tasks like text completion or auto-correction.
+
+Paraphrasing: Generate paraphrases of a given sentence. This might require additional fine-tuning or specific setups.
+
+Semantic Similarity: Assess how similar two pieces of text are in terms of their meaning.
