@@ -1,4 +1,5 @@
-# llm-models (DistilBert)
+# llm-models (DistilBert): Run locally on your Mac
+
 ## How it works
 
 Tokenization
