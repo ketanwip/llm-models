@@ -1,4 +1,5 @@
 # llm-models (DistilBert): Run locally on your Mac
+quicky and dirty way to get hands on to run LLM locally
 
 ## How it works
 
